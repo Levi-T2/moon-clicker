@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Pixelify+Sans&family=VT323&display=swap"
+        rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-img">
+
+    <header class="container-fluid">
+        <section class="row text-center">
+            <div class="col-12 moon-text-top d-flex justify-content-evenly">
+                <i class="mdi mdi-star-four-points-outline"></i>
+                Topaz Miner
+                <i class="mdi mdi-star-four-points-outline"></i>
+            </div>
+        </section>
+    </header>
+
+    <main class="container-fluid">
+        <section class="row text-center justify-content-around">
+            <div class="col-10">
+                <img class="topaz-img" role="button" onclick="mineMoon()" src='topaz.jpg'>
+            </div>
+        </section>
+        <section class="row text-center justify-content-center">
+            <div class="col-3 topaz-stats">
+                <p class='cool-font-style'>
+                    Mining Power: <span id='click value'>0</span>
+                </p>
+            </div>
+            <div class="col-3 topaz-stats">
+                <p class='cool-font-style'>
+                    Total Topazes: <span id='total cheese'>0</span>
+                </p>
+            </div>
+            <div class="col-3 topaz-stats">
+                <p class='cool-font-style'>
+                    Topazes Per Three Seconds: <span id='auto value'></span>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid">
+        <section class="row text-center justify-content-around topaz-stats">
+            <div class="col-3">
+                <p class="cool-font-style">Click Upgrades</p>
+                <div class="upgrade-styles">
+                    <button class='btn btn-style' onclick="buyClickPowerUpgrade()">
+                        <p class="mb-0">Pickaxe</p>
+                        <p class='mb-0'>+1 Mining Power</p>
+                        <p class="mb-0">Cost: <span id='click upgrade1'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick='buyCheeseAxeUpgrade()'>
+                        <p class="mb-0">Drill</p>
+                        <p class="mb-0">+10 Mining Power</p>
+                        <p class="mb-0">Cost: <span id='click upgrade2'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick='buyCheeseChainsawUpgrade()'>
+                        <p class="mb-0">Diamond Bladed Saw</p>
+                        <p class="mb-0">+50 Mining Power</p>
+                        <p class="mb-0">Cost: <span id='click upgrade3'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick='buyLaserDrillUpgrade()'>
+                        <p class="mb-0">Samsung Laser Drill</p>
+                        <p class="mb-0">+100 Mining Power</p>
+                        <p class="mb-0">Cost: <span id='click upgrade4'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick='buySatelliteUpgrade()'>
+                        <p class="mb-0">LG Laser Satellite</p>
+                        <p class="mb-0">+250 Mining Power</p>
+                        <p class="mb-0">Cost: <span id='click upgrade5'></span> Topazes</p>
+                    </button>
+                </div>
+            </div>
+            <div class="col-3">
+                <p class="cool-font-style">Auto. Upgrades</p>
+                <div class="upgrade-styles">
+                    <button class='btn btn-style' onclick="buyAutoUpgradeMiner()">
+                        <p class="mb-0">Topaz Miner</p>
+                        <p class="mb-0">+1 Topaz Each 3/sec</p>
+                        <p class="mb-0">Cost: <span id='auto upgrade1'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick="buyAutoUpgradeDrill()">
+                        <p class="mb-0">Nexus Auto Drill</p>
+                        <p class="mb-0">+10 Topaz Each 3/sec</p>
+                        <p class="mb-0">Cost: <span id='auto upgrade2'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick="buyAutoUpgradeSpiral()">
+                        <p class="mb-0">Quantum Spiral Excavator</p>
+                        <p class="mb-0">+100 Topaz Each 3/sec</p>
+                        <p class="mb-0">Cost: <span id='auto upgrade3'></span> Topazes</p>
+                    </button>
+                    <button class='btn btn-style' onclick="buyAutoUpgradeImpactor()">
+                        <p class="mb-0">Omega Impactor X-95</p>
+                        <p class="mb-0">+300 Topaz Each 3/sec</p>
+                        <p class="mb-0">Cost: <span id='auto upgrade4'></span> Topazes</p>
+                    </button>
+                </div>
+            </div>
+            <div class="col-3">
+                <p class="cool-font-style">Click Stats</p>
+                <div class="upgrade-styles">
+                    <p> Pickaxes:
+                        <span id='click stat1'></span>
+                    </p>
+                    <p> Drills:
+                        <span id='click stat2'></span>
+                    </p>
+                    <p> Diamond Bladed Saws:
+                        <span id='click stat3'></span>
+                    </p>
+                    <p> Samsung Laser Drills:
+                        <span id='click stat4'></span>
+                    </p>
+                    <p> LG Laser Satellites:
+                        <span id='click stat5'></span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-3">
+                <p class="cool-font-style">Auto. Stats</p>
+                <div class="upgrade-styles">
+                    <p>Topaz Miners:
+                        <span id='auto stat1'></span>
+                    </p>
+                    <p>Nexus Auto Drills:
+                        <span id='auto stat2'></span>
+                    </p>
+                    <p>Quantum Spiral Excavators:
+                        <span id='auto stat3'></span>
+                    </p>
+                    <p>Omega Impactor X-95s:
+                        <span id='auto stat4'></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

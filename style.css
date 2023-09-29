@@ -1,0 +1,67 @@
+.moon-text-top {
+    background-color: antiquewhite;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 5px double black;
+    padding: 0.6rem;
+    font-family: 'Macondo', cursive;
+}
+
+.topaz-stats {
+    background-color: rgba(250, 235, 215, 0.651);
+    padding: 1rem;
+    margin: 0.6rem;
+    border: 6px double black;
+    border-radius: 3%;
+}
+
+.topaz-stats-center {
+    background-color: antiquewhite;
+    padding: 3rem;
+    margin: 0.8rem;
+    border: 6px double black;
+    border-radius: 3%;
+}
+
+.upgrade-styles {
+    background-color: rgb(239, 197, 143);
+    border: 4px solid black;
+    padding: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'VT323', monospace;
+    border-radius: 2%;
+    font-size: 1.1em;
+}
+
+.topaz-img {
+    max-height: 32dvh;
+    margin: 4rem;
+    border: 3px double antiquewhite;
+    border-radius: 28%;
+}
+
+.bg-img {
+    background-image: url(https://images.unsplash.com/photo-1558368782-f5301dcfb9bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3267&q=80);
+    background-position: center;
+    background-size: cover;
+}
+
+.btn-style {
+    background-color: darkgreen;
+    color: white;
+    margin: 0.75rem;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cool-font-style {
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    margin-bottom: 0rem;
+}
