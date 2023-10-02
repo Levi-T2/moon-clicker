@@ -10,6 +10,7 @@ let clickUpgrade = {
     cost3: 500,
     cost4: 1200,
     cost5: 3700,
+    cost6: 8000,
 
     autoCost1: 25,
     autoCost2: 250,
@@ -24,6 +25,7 @@ let clickStats = {
     stats3: 0,
     stats4: 0,
     stats5: 0,
+    stats6: 0,
 
     autoStats1: 0,
     autoStats2: 0,
@@ -32,7 +34,7 @@ let clickStats = {
     autoStats5: 0,
 }
 
-let totalCheese = 3400
+let totalCheese = 0
 
 function mineMoon() {
 
@@ -102,6 +104,19 @@ function buySatelliteUpgrade() {
         clickUpgrade.cost5 += 1000
         playerStats[0].clickPower += 250
         clickStats.stats5 += 1
+    }
+    drawClickUpgradeCost()
+    drawCheese()
+    drawPlayerClickValue()
+    drawClickStats()
+}
+
+function buyCannonUpgrade() {
+    if (totalCheese >= clickUpgrade.cost6) {
+        totalCheese -= clickUpgrade.cost6
+        clickUpgrade.cost6 += 3000
+        playerStats[0].clickPower += 600
+        clickStats.stats6 += 1
     }
     drawClickUpgradeCost()
     drawCheese()
@@ -197,6 +212,9 @@ function drawClickUpgradeCost() {
     const clickUpgradeElement5 = document.getElementById('click upgrade5')
     clickUpgradeElement5.innerText = clickUpgrade.cost5
 
+    const clickUpgradeElement6 = document.getElementById('click upgrade6')
+    clickUpgradeElement6.innerText = clickUpgrade.cost6
+
     const autoUpgradeElement1 = document.getElementById('auto upgrade1')
     autoUpgradeElement1.innerText = clickUpgrade.autoCost1
 
@@ -225,6 +243,9 @@ function drawClickStats() {
 
     const clickStatElement5 = document.getElementById('click stat5')
     clickStatElement5.innerText = clickStats.stats5
+
+    const clickStatElement6 = document.getElementById('click stat6')
+    clickStatElement6.innerText = clickStats.stats6
 
     const clickAutoStatElement1 = document.getElementById('auto stat1')
     clickAutoStatElement1.innerText = clickStats.autoStats1

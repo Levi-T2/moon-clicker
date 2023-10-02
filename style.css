@@ -4,25 +4,30 @@
     font-size: 2em;
     font-weight: bold;
     border-bottom: 5px double black;
-    padding: 0.6rem;
+    padding: 0.3rem;
     font-family: 'Macondo', cursive;
 }
 
 .topaz-stats {
     background-color: rgba(250, 235, 215, 0.651);
-    padding: 1rem;
+    padding: .75rem;
     margin: 0.6rem;
     border: 6px double black;
     border-radius: 3%;
 }
 
-.topaz-stats-center {
-    background-color: antiquewhite;
-    padding: 3rem;
-    margin: 0.8rem;
+.topaz-stats-scroll {
+    background-color: rgba(250, 235, 215, 0.651);
+    padding: .75rem;
+    margin: 0.6rem;
     border: 6px double black;
     border-radius: 3%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 18rem;
+    height: 24rem;
 }
+
 
 .upgrade-styles {
     background-color: rgb(239, 197, 143);

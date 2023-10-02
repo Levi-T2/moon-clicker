@@ -34,17 +34,17 @@
             </div>
         </section>
         <section class="row text-center justify-content-center">
-            <div class="col-3 topaz-stats">
+            <div class="col-3 topaz-stats d-flex justify-content-center align-items-center">
                 <p class='cool-font-style'>
                     Mining Power: <span id='click value'>0</span>
                 </p>
             </div>
-            <div class="col-3 topaz-stats">
+            <div class="col-3 topaz-stats d-flex justify-content-center align-items-center">
                 <p class='cool-font-style'>
                     Total Topazes: <span id='total cheese'>0</span>
                 </p>
             </div>
-            <div class="col-3 topaz-stats">
+            <div class="col-3 topaz-stats d-flex justify-content-center align-items-center">
                 <p class='cool-font-style'>
                     Topazes Per Three Seconds: <span id='auto value'></span>
                 </p>
@@ -53,9 +53,9 @@
     </main>
     <footer class="container-fluid">
         <section class="row text-center justify-content-around topaz-stats">
-            <div class="col-3">
+            <div class="col-3 ">
                 <p class="cool-font-style">Click Upgrades</p>
-                <div class="upgrade-styles">
+                <div class="upgrade-styles topaz-stats-scroll">
                     <button class='btn btn-style' onclick="buyClickPowerUpgrade()">
                         <p class="mb-0">Pickaxe</p>
                         <p class='mb-0'>+1 Mining Power</p>
@@ -81,11 +81,16 @@
                         <p class="mb-0">+250 Mining Power</p>
                         <p class="mb-0">Cost: <span id='click upgrade5'></span> Topazes</p>
                     </button>
+                    <button class='btn btn-style' onclick='buyCannonUpgrade()'>
+                        <p class="mb-0">Codeworks Plasma Cannon</p>
+                        <p class="mb-0">+600 Mining Power</p>
+                        <p class="mb-0">Cost: <span id='click upgrade6'></span> Topazes</p>
+                    </button>
                 </div>
             </div>
             <div class="col-3">
                 <p class="cool-font-style">Auto. Upgrades</p>
-                <div class="upgrade-styles">
+                <div class="upgrade-styles topaz-stats-scroll">
                     <button class='btn btn-style' onclick="buyAutoUpgradeMiner()">
                         <p class="mb-0">Topaz Miner</p>
                         <p class="mb-0">+1 Topaz Each 3/sec</p>
@@ -125,6 +130,9 @@
                     </p>
                     <p> LG Laser Satellites:
                         <span id='click stat5'></span>
+                    </p>
+                    <p> Codeworks Plasma Cannons:
+                        <span id='click stat6'></span>
                     </p>
                 </div>
             </div>
